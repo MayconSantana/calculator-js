@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #030303;
+}
+
+.calculadora {
+  background: #ffffff;
+  padding: 1em;
+  width: 400px;
+}
+.calculadora .visor {
+  text-align: right;
+  margin: 10px 0;
+  background: #c2c1c1;
+  padding: 10px 10px 0 10px;
+  width: 100%;
+}
+.calculadora .visor .operacao-processada,
+.calculadora .visor .operacao-atual {
+  min-height: 1.6em;
+  overflow-wrap: break-word;
+}
+.calculadora .visor .operacao-processada {
+  font-size: 0.8em;
+  color: #888888;
+}
+.calculadora .visor .operacao-atual {
+  font-size: 2em;
+  font-weight: bold;
+}
+.calculadora .buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+.calculadora .buttons button {
+  height: 70px;
+  font-size: 1.6em;
+  cursor: pointer;
+  border: none;
+  background: #f3f0f0;
+  transition: 0.2s all;
+}
+.calculadora .buttons button:hover {
+  background: #a5afb8;
+}
+.calculadora .buttons #igual-btn {
+  grid-column: span 2;
+  background: #6baaf3;
+}
+.calculadora .buttons #igual-btn:hover {
+  background: #2f619b;
+}
+
+@media (max-width: 450px) {
+  body {
+    padding: 0 10px;
+  }
+  button {
+    font-size: 1.2em !important;
+  }
+}/*# sourceMappingURL=style.css.map */
